@@ -5,6 +5,12 @@ PassGuard is a simple and modern password strength checker website that helps us
 This project focuses on basic cybersecurity principles and demonstrates how enforcing strong password policies can improve account security.
 
 ---
+## 🌐 Live Demo
+
+🚀 **PassGuard is live here:**  
+👉 https://shubhdas143.github.io/Password-Strength-Checker/
+
+---
 
 ## 🚀 Features
 
