@@ -1,0 +1,108 @@
+:root{
+    --bg-1:#0f1724;
+    --bg-2:#132033;
+    --glass: rgba(255,255,255,0.06);
+    --accent:#6ee7b7;
+    --accent-2:#60a5fa;
+    --danger:#fb7185;
+    --muted:rgba(255,255,255,0.7);
+}
+
+*{box-sizing:border-box}
+
+.body-centered{ /* helper wrapper in case needed */ }
+
+.body-centered{ /* helper wrapper in case needed */ }
+
+body{
+    font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
+    min-height:100vh;
+    margin:0;
+    background: radial-gradient(1200px 600px at 10% 10%, rgba(96,165,250,0.08), transparent), linear-gradient(135deg,var(--bg-1),var(--bg-2));
+    color:#e6eef8;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    padding-top:36px;
+    padding-bottom:40px;
+    overflow:hidden;
+}
+
+.app{width:100%;max-width:820px;padding:20px;display:flex;align-items:center;justify-content:center}
+
+.card{
+    position:relative;
+    background:var(--glass);
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:16px;
+    padding:28px;
+    box-shadow:0 10px 40px rgba(2,6,23,0.6);
+    backdrop-filter: blur(8px) saturate(1.1);
+}
+
+.card-head h1{margin:0;font-size:20px;font-weight:700}
+.subtitle{margin:6px 0 18px;color:var(--muted);font-size:13px}
+
+.form{display:grid;gap:12px}
+
+/* Ensure the input keeps the same styled background whether it's password or text */
+.input-row input,
+input[type="password"],
+input[type="text"]{
+    width:100%;
+    padding:14px 12px;
+    border-radius:10px;
+    border:none;
+    font-size:15px;
+    background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));
+    color:inherit;
+    outline:none;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,0.02);
+}
+
+.input-row{position:relative;display:block}
+.input-row input[type="password"]{padding-right:84px}
+.vis-btn{position:absolute;right:8px;top:50%;transform:translateY(-50%);background:transparent;border:none;color:var(--muted);padding:8px 10px;border-radius:8px;font-weight:600;cursor:pointer}
+.vis-btn:hover{background:rgba(255,255,255,0.03);color:#fff}
+.vis-btn:active{transform:translateY(-50%) scale(0.98)}
+
+button#checkBtn{padding:12px;border-radius:10px;border:none;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#052036;font-weight:600;cursor:pointer;box-shadow:0 6px 18px rgba(96,165,250,0.12);transition:transform 180ms ease,box-shadow 180ms ease,opacity 180ms ease}
+button#checkBtn:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(96,165,250,0.18);opacity:0.98}
+button#checkBtn:active{transform:translateY(1px)}
+
+.strength-wrap{display:flex;align-items:center;gap:12px}
+.strength-bar{flex:1;height:12px;background:rgba(255,255,255,0.04);border-radius:999px;overflow:hidden}
+.strength-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),var(--accent-2));transition:width 300ms ease,background 300ms ease}
+.strength-text{min-width:130px;text-align:right;font-weight:600;font-size:13px;color:var(--muted)}
+
+.feedback-list{margin:6px 0 0;padding-left:18px;color:rgba(255,183,77,0.95);font-size:13px}
+
+.card-foot{margin-top:16px;color:rgba(255,255,255,0.85);font-size:15px;text-align:center;font-weight:600}
+
+/* Background animated marquee watermark */
+.bg-marquee{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;mix-blend-mode:overlay}
+.marquee-track{position:absolute;white-space:nowrap;left:-10%;top:20%;opacity:0.06;font-size:40px;color:#ffffff;transform:rotate(-12deg)}
+.marquee-track span{padding-right:40px;font-weight:700;letter-spacing:1px}
+.marquee-track--reverse{top:70%;transform:rotate(10deg)}
+
+@keyframes slideLeft{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes slideRight{0%{transform:translateX(-50%)}100%{transform:translateX(0)}}
+.marquee-track{animation:slideLeft 28s linear infinite}
+.marquee-track--reverse{animation:slideRight 36s linear infinite}
+
+/* Responsive tweaks */
+@media (max-width:520px){
+    .marquee-track{font-size:26px}
+    .strength-text{display:none}
+}
+
+/* Small centered header placed above the card (outside it) */
+.site-header{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:14px;z-index:5}
+.site-logo svg{width:56px;height:56px;border-radius:8px}
+.site-name{font-size:20px;font-weight:800;color:#e6eef8;margin-top:6px}
+@media (max-width:520px){
+    .site-logo svg{width:44px;height:44px}
+    .site-name{font-size:16px}
+}
+/* (header removed) */

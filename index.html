@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Password Strength Checker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header: logo and site name placed above the main card (outside the card) -->
+<div class="site-header">
+    <div class="site-logo">
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L3 6v5c0 5 3.7 9.7 9 11 5.3-1.3 9-6 9-11V6l-9-4z" fill="#60a5fa"/>
+            <path d="M9.5 11.5c0-1.657 1.343-3 3-3v5c-1.657 0-3-1.343-3-3z" fill="#052036"/>
+            <text x="12" y="17" text-anchor="middle" font-size="9" fill="#e6eef8" font-family="Inter, sans-serif" font-weight="700">PG</text>
+        </svg>
+    </div>
+    <div class="site-name">PassGuard</div>
+</div>
+
+<main class="app">
+    <section class="card">
+        <header class="card-head">
+            <h1>Password Strength Checker</h1>
+            <p class="subtitle">Protect your accounts with a stronger password</p>
+        </header>
+
+        <div class="form">
+            <div class="input-row">
+                <input type="password" id="password" placeholder="Enter your password" autocomplete="new-password">
+                <button type="button" id="toggleVis" class="vis-btn" aria-pressed="false" aria-label="Show password">Show</button>
+            </div>
+            <div class="strength-wrap">
+                <div class="strength-bar" id="strengthBar"><div class="strength-fill" id="strengthFill"></div></div>
+                <div id="result" class="strength-text"></div>
+            </div>
+
+            <button id="checkBtn">Check Strength</button>
+
+            <ul id="feedback" class="feedback-list" aria-live="polite"></ul>
+        </div>
+
+        <footer class="card-foot">Made with ❤️ by Shubhranshu Das</footer>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
