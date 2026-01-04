@@ -43,3 +43,5 @@ This project focuses on basic cybersecurity principles and demonstrates how enfo
 - **Git & GitHub** – Version control and collaboration  
 - **Browser Developer Tools** – Debugging and security testing  
 
+
+## ⭐ If you find this helpful, feel free to star the repo!
