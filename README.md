@@ -18,7 +18,7 @@ This project focuses on basic cybersecurity principles and demonstrates how enfo
 - Validates uppercase and lowercase letters
 - Ensures at least one number
 - Requires at least one special character
-- Clean and responsive user interface
+- Clean and responsive user interface 
 - Instant feedback on password strength
 
 ---
