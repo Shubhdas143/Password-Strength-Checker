@@ -44,4 +44,4 @@ This project focuses on basic cybersecurity principles and demonstrates how enfo
 - **Browser Developer Tools** – Debugging and security testing  
 
 
-## ⭐ If you find this helpful, feel free to star the repo!
+## ⭐ If you find this helpful, then pls give a star to this repo!
