@@ -1,4 +1,4 @@
-# 🔐 PassGuard – Password Strength Checker    
+# 🔐 PassGuard – Password Strength Checker     
 
 PassGuard is a simple and modern password strength checker website that helps users create strong and secure passwords by validating essential security rules.
 
